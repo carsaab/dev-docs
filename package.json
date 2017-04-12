@@ -1,0 +1,33 @@
+{
+  "name": "@flat/dev-docs",
+  "private": true,
+  "scripts": {
+    "test": "script/test"
+  },
+  "devDependencies": {
+    "async": "^2.0.0",
+    "glob": "^7.0.5",
+    "ignore": "^3.1.3",
+    "js-yaml": "^3.6.1",
+    "remark-lint": "^5.0.0",
+    "remark-parse": "^2.0.0",
+    "remark-retext": "^2.0.0",
+    "remark-stringify": "^2.0.0",
+    "retext-english": "^2.0.0",
+    "retext-equality": "^2.3.2",
+    "retext-quotes": "^1.0.0",
+    "retext-readability": "^3.0.0",
+    "retext-repeated-words": "^1.0.0",
+    "retext-sentence-spacing": "^1.0.0",
+    "retext-simplify": "^3.0.0",
+    "retext-words": "bkeepers/retext-words",
+    "to-vfile": "^2.1.0",
+    "unified": "^5.0.0",
+    "unist-util-visit": "^1.1.1",
+    "vfile-reporter": "^3.0.0",
+    "vfile-statistics": "^1.0.0"
+  },
+  "dependencies": {
+    "deploy-to-gh-pages": "^1.3.3"
+  }
+}

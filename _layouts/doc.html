@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="sidenav">
+  <div class="items">
+    <a href="{{site.baseurl}}/" class="{% if page.pid == 'home' %}active{% endif %}">Overview</a>
+  </div>
+
+  <div class="title">Embed</div>
+  <div class="items">
+    <a href="{{site.baseurl}}/embed" class="{% if page.pid == 'embed-intro' %}active{% endif %}">Introduction</a>
+    <a href="{{site.baseurl}}/embed/url-parameters" class="{% if page.pid == 'embed-url' %}active{% endif %}">URL parameters</a>
+    <!-- <a href="{{site.baseurl}}/embed/javascript-api">JavaScript API</a> -->
+    <a href="{{site.baseurl}}/embed/oembed" class="{% if page.pid == 'embed-oembed' %}active{% endif %}">oEmbed</a>
+  </div>
+
+  <div class="title">Flat API</div>
+  <div class="items">
+    <!-- <a href="">Introduction</a> -->
+    <!-- <a href="">OAuth2 Authentication</a> -->
+    <!-- <a href="">Getting Started</a> -->
+    <a href="https://flat.io/developers/api/reference/">Swagger/OpenAPI Specification</a>
+    <a href="https://github.com/FlatIO">SDKs</a>
+    <!-- <a href="">Rate Limits</a> -->
+    <!-- <a href="">Errors</a> -->
+    <!-- <a href="">API Changelog</a> -->
+  </div>
+</div>
+
+<div class="page">
+  {% unless page.notitle %}<h1>{{ page.title }}</h1>{% endunless %}
+  <div class="content">{{ content }}</div>
+</div>

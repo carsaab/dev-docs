@@ -1,0 +1,34 @@
+.sidenav {
+  width: 170px;
+  float: left;
+  margin-left: 40px;
+
+  .title {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.34px;
+    color: #363C50;
+    padding: 7px 8px;
+    line-height: 21px;
+  }
+
+  .items {
+    margin-bottom: 15px;
+
+    a {
+      display: block;
+      padding: 8px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.3px;
+      color: @text-color;
+
+      &.active {
+        background-image: linear-gradient(-180deg, #FFFFFF 0%, #FDFDFD 100%);
+        box-shadow: 0 5px 14px 0 rgba(40,48,79,0.00), 0 2px 4px 0 rgba(40,48,79,0.20), inset 0 -1px 4px 0 rgba(23,78,138,0.09);
+        border-radius: 3px;
+      }
+    }
+  }
+}

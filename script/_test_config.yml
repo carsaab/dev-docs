@@ -1,0 +1,4 @@
+baseurl: ''
+github:
+  branch: master
+  repository_nwo: FlatIO/dev-docs

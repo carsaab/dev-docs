@@ -1,0 +1,5 @@
+_site
+_site_test
+.jekyll-metadata
+node_modules
+vendor

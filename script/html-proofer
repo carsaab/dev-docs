@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'html-proofer'
+
+HTMLProofer::Runner.new(['_site_test'],
+  :type => :directory,
+  :verbose => !!ENV['VERBOSE'],
+  :check_html => true
+).run

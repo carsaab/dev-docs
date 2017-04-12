@@ -1,0 +1,16 @@
+source 'https://rubygems.org'
+ruby RUBY_VERSION
+
+gem 'jekyll', '3.4.3'
+gem 'therubyracer'
+
+group :jekyll_plugins do
+    gem 'jekyll-less', git: 'https://github.com/sfi0zy/jekyll-less.git'
+    gem 'jekyll-seo-tag'
+    gem 'jekyll-sitemap'
+end
+
+group :test do
+  # gem 'rake'
+  gem 'html-proofer'
+end

@@ -1,0 +1,4 @@
+#!/bin/bash -e
+bundle exec jekyll build --config script/_test_config.yml  --destination _site_test
+script/html-proofer
+script/test-prose
