@@ -1,8 +1,8 @@
 ---
 title: Overview
 pid: home
-permalink: 'index.html'
-sitemap: false #duplicated
+permalink: index.html
+sitemap: false
 ---
 
 Welcome to Flat's API and Embed documentation. Flat's API enables developers to programmatically interact with Flat's music notation online platform and technologies with your projects: from web music engraving to real-time collaboration.
