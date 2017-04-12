@@ -3,7 +3,7 @@ description: Documentation for Flat APIs and Embed
 email: developers@flat.io
 
 baseurl: /developers/docs
-url: ''
+url: 'https://flat.io'
 
 permalink: /:path/
 
