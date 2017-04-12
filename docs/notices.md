@@ -1,7 +1,7 @@
 ---
 title: Notices
 pid: notices
-permalink: notices
+permalink: notices.html
 sitemap: false
 ---
 

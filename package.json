@@ -25,9 +25,7 @@
     "unified": "^5.0.0",
     "unist-util-visit": "^1.1.1",
     "vfile-reporter": "^3.0.0",
-    "vfile-statistics": "^1.0.0"
-  },
-  "dependencies": {
+    "vfile-statistics": "^1.0.0",
     "deploy-to-gh-pages": "^1.3.3"
   }
 }

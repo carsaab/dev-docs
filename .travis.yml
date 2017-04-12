@@ -1,10 +1,11 @@
-sudo: false
+sudo: required
 language: node_js
 node_js:
   - 6
 
 before_install:
   - rvm install 2.3.3
+  - rvm --default use 2.3.3
 install:
   - npm install -d
   - bundle install
@@ -18,11 +19,15 @@ cache:
   directories:
     - node_modules
 
+branches:
+  except:
+    - gh-pages
+
 script: script/test
 
 deploy:
   - skip_cleanup: true
-  on:
-    branch: master
+    on:
+      branch: master
     provider: script
-    script: bundle exec jekyll build && deploy-to-gh-pages --update _site
+    script: rvm 2.3.3 do bundle exec jekyll build && npm install -d shelljs deploy-to-gh-pages && deploy-to-gh-pages --update _site

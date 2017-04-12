@@ -1,6 +1,6 @@
 ---
 title: Sheet music Embed URL parameters
-permalink: embed/url-parameters
+permalink: embed/url-parameters.html
 pid: embed-url
 ---
 

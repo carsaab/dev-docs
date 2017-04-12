@@ -1,4 +1,49 @@
+title: Flat Developer
+description: Documentation for Flat APIs and Embed
+email: developers@flat.io
+
 baseurl: ''
+url: ''
+
+permalink: /:path/
+
 github:
   branch: master
   repository_nwo: FlatIO/dev-docs
+
+markdown: kramdown
+
+defaults:
+  -
+    scope:
+      path: 'docs'
+    values:
+      layout: doc
+
+gems:
+  - jekyll-less
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - scripts
+  - node_modules
+  - package.json
+  - _site_test
+
+twitter:
+  username: flat_io
+logo: https://flat.io/img/logo_flat.svg
+social:
+  name: Flat
+  links:
+    - https://www.facebook.com/flat.io
+    - https://twitter.com/flat_io
+    - https://plus.google.com/+FlatIO
+    - https://www.linkedin.com/company/flat-io
+    - https://www.youtube.com/user/flatproject
+    - https://www.instagram.com/flat.io
+    - https://github.com/FlatIO

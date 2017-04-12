@@ -6,7 +6,6 @@ baseurl: /developers/docs
 url: ''
 
 permalink: /:path/
-branch: master
 
 github:
   branch: master

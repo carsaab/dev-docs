@@ -1,6 +1,6 @@
 ---
 title: Sheet music oEmbed
-permalink: embed/oembed
+permalink: embed/oembed.html
 pid: embed-oembed
 ---
 
