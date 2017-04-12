@@ -29,7 +29,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - scripts
+  - script
   - node_modules
   - package.json
   - _site_test
