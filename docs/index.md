@@ -1,7 +1,7 @@
 ---
 title: Overview
 pid: home
-permalink: '/'
+permalink: 'index.html'
 sitemap: false #duplicated
 ---
 
