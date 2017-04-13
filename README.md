@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/FlatIO/dev-docs.svg?branch=master)](https://travis-ci.org/FlatIO/dev-docs)
 
-Flat Developers Documentation (https://flat.io/developers/docs) is an Open Source documentation for the different Flat APIs and [Embed](https://flat.io/developers/docs/embed/).
+Flat Developers Documentation (https://flat.io/developers/docs) is an Open Source documentation for the different [Flat APIs](https://flat.io/developers/docs/api/) and [Embed](https://flat.io/developers/docs/embed/).
 
 ## Support / questions
 

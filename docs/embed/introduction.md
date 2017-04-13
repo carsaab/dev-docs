@@ -7,7 +7,9 @@ pid: embed-intro
 
 Flat is the most advanced music notation software on the web. Our products include a high-quality music and tabs notation, web-based music notation editing, real-time collaboration across devices, whole history of every modification made on the music scores, WebAudio Playback and WebMIDI inputs/output... and much more!
 
-Flat's Music notation Embed lets the visitors and users of your website view, edit, listen and print sheet music directly in your web pages with a complete customization and endless possibilities. Discover [a non-customized version of our embed](https://flat.io/embed/56ae21579a127715a02901a6-house-of-the-rising-sun?layout=page) to experience it.
+Flat's Music notation Embed lets the visitors and users of your website view, edit, listen and print sheet music directly in your web pages with a complete customization and endless possibilities. Discover a non-customized version of our embed to experience it:
+
+<iframe src="https://flat.io/embed/56ae21579a127715a02901a6?layout=page" allowfullscreen height="450" width="100%" frameBorder="0"></iframe>
 
 ## Flat's Technology
 
