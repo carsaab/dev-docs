@@ -1,11 +1,12 @@
 ---
 title: Overview
+description: Flat's API and Music engraving Embed enables developers to programmatically interact with Flat's music notation online platform.
 pid: home
 permalink: index.html
 sitemap: false
 ---
 
-Welcome to Flat's API and Embed documentation. Flat's API enables developers to programmatically interact with Flat's music notation online platform and technologies with your projects: from web music engraving to real-time collaboration.
+Welcome to Flat's API and Embed documentation. Flat's API enables developers to programmatically interact with Flat's music notation online platform and technologies: from web music engraving to real-time collaboration.
 
 ## What is [Flat](https://flat.io)?
 

@@ -3,3 +3,4 @@ _site_test
 .jekyll-metadata
 node_modules
 vendor
+npm-debug.log
