@@ -11,6 +11,7 @@ We regularly update our API and services, you can discover all the changes to ou
 
 * feat(comments): Make "revision" optional when creating comments and support of "last" keyword.
 * fix(revisions): Missing `id` property in `ScoreRevision`.
+* update(spec): Specify `binary` response type for `GET /scores/{score}/revisions/{revision}/{format}`
 
 ## 2017-04-10
 
