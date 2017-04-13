@@ -21,7 +21,7 @@ These URL query strings control the engraving display of your music scores. You 
 
 | Query Parameter | Summary | Values |
 |:----------------|:--------|:-------|
-| [`layout`](#change-the-music-engraving-layout-mode-layout) | Display the score in page or track mode | `track` or `page` (default = `track`) |
+| [`layout`](#change-the-music-engraving-layout-mode-layout) | Display the score in responsive, page or track mode | `responsive`, `page` or `track` (default = `responsive`) |
 | [`zoom`](#change-zoom-scaling-zoom) | Default zoom value | `auto` or `0.1` to `3` (default = `auto`)|
 
 ## Loading modules
@@ -67,15 +67,19 @@ The following features require an Embed API Key to be used.
 
 ### Change the music engraving layout mode (`layout`)
 
-We support two different engraving modes:
+We support three different engraving modes:
 
-* `track` (default)
+* `responsive`
 
-![Layout page mode]({{site.baseurl}}/assets/img/embed-layout-track.png)
+![Layout Responsive mode]({{site.baseurl}}/assets/img/embed-layout-responsive.png)
 
 * `page`
 
 ![Layout Page mode]({{site.baseurl}}/assets/img/embed-layout-page.png)
+
+* `track` (default)
+
+![Layout page mode]({{site.baseurl}}/assets/img/embed-layout-track.png)
 
 ### Change zoom scaling (`zoom`)
 
