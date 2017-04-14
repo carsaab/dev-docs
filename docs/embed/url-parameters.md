@@ -13,7 +13,7 @@ Please note that all the options referenced here are not included in our free em
 
 | Query Parameter | Summary | Values |
 |:----------------|:--------|:-------|
-| `clientId` | Your client identifier (aka API key) | [Get yours](https://flat.io/developers) |
+| `appId` | Your application identifier (aka API key) | [Get yours](https://flat.io/support) |
 
 ## Layout and Music notation Engraving parameters
 
