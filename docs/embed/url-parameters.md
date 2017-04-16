@@ -14,6 +14,7 @@ Please note that all the options referenced here are not included in our free em
 | Query Parameter | Summary | Values |
 |:----------------|:--------|:-------|
 | `appId` | Your application identifier (aka API key) | [Get yours](https://flat.io/support) |
+| `sharingKey` | The score sharing key when the privacy mode is `privateLink` |  |
 
 ## Layout and Music notation Engraving parameters
 
