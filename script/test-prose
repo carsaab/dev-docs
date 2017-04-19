@@ -41,7 +41,7 @@ var prose = unified()
       'this guide': { omit: true },
     }
   })
-  .use(repeated)
+  .use(repeated);
 
 // Check rigorously if `FULL_PROSE_CHECK` is in env.
 if(process.env.FULL_PROSE_CHECK) {
@@ -98,7 +98,7 @@ var markdown = unified()
 async.map(ignore.filter(glob.sync('docs/**/*.md')), function(filePath, callback) {
   vfile.read(filePath, function(err, file) {
     if(err) return callback(err);
-    markdown.process(file, {footnotes: true}, callback);
+    markdown.process(file, callback);
   });
 }, function (err, results) {
   console.log(report(results));
