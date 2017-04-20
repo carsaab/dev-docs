@@ -13,6 +13,8 @@
   margin-bottom: 40px;
 
   .items {
+    display: flex;
+    align-items: center;
     font-weight: bold;
     font-size: 12px;
     color: @text-color;
@@ -21,6 +23,55 @@
     a {
       padding: 15px;
       margin: 0 -15px 0 30px;
+    }
+  }
+
+  .user-status {
+    display: flex;
+    align-items: center;
+    max-height: 36px;
+
+    border-radius: 4px;
+    overflow: hidden;
+    background: white;
+    margin-left: 30px;
+    box-shadow: 0 5px 14px rgba(40,48,79,0),
+                0 2px 4px rgba(40,48,79,.2),
+                inset 0 -1px 4px rgba(23,78,138,.09);
+
+
+    .user-app {
+      color: @flat-grey-dark!important;
+      font-size: 12px;
+      font-weight: @font-bold;
+      line-height: 14px;
+      letter-spacing: .8px;
+      padding: 11px 16px;
+      margin: 0;
+
+      &.wcaret {
+        padding: 11px 8px 11px 16px;
+      }
+
+      .text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .caret {
+        margin-left: 12px;
+      }
+    }
+
+    .user-picture {
+      flex: 0 0 36px;
+      height: 36px;
+      width: 36px;
+    }
+
+    &:hover {
+      box-shadow: 0 5px 14px rgba(40,48,79,.2),
+                  0 2px 4px rgba(40,48,79,.2),
+                  inset 0 -1px 4px rgba(23,78,138,.2);
     }
   }
 }
