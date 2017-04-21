@@ -73,17 +73,29 @@ When instantiating `Flat.Embed`, you can pass options in the second parameter. I
   * [`on`](#onevent-string-callback-function-void): Subscribe to events
   * [`off`](#offevent-string-callback-function-void): Unsubscribe from events
   * [`loadFlatScore`](#loadflatscoreid-string-promisevoid-apierror): Load a score hosted on Flat
-  * [`getJson`](#getjson-object): Get the score data in Flat JSON format
+  * [`loadMusicXML`](#loadmusicxmlscore-mixed-promisevoid-error): Load MusicXML file (compressed or not)
+  * [`loadJSON`](#loadjsonscore-object-promisevoid-error): Load Flat JSON file
+  * [`getMusicXML`](#getmusicxmloptions-object-promisestringuint8array-error): Get the score in MusicXML (compressed or not)
+  * [`getJSON`](#getjson-object): Get the score data in Flat JSON format
   * [`getScoreMeta`](#getscoremeta-object): Get the metadata from the current score (for hosted scores)
   * [`fullscreen`](#fullscreenstate-bool-promisevoid-error): Toggle fullscreen mode
   * [`play`](#play-promisevoid-error): Start playback
   * [`pause`](#pause-promisevoid-error): Pause playback
   * [`stop`](#stop-promisevoid-error): Stop playback
   * [`print`](#print-promisevoid-error): Print the score
-  * [`getZoom`](#getzoom-promisenumber-error): Get the current display zoom
-  * [`setZoom`](#setzoomnumber-promisenumber-error): Change the display zoom
+  * [`getZoom`](#getzoom-promisenumber-error): Get the current display zoom ratio
+  * [`setZoom`](#setzoomnumber-promisenumber-error): Change the display zoom ratio
+  * [`getAutoZoom`](#getautozoom-promiseboolean-error): Get the state of the auto-zoom mode
+  * [`setAutoZoom`](#setautozoomboolean-promiseboolean-error): Enable or disable the auto-zoom mode
 * [Events API](#events-api)
-  * [`play`](#event-play): The score is played
+  * [`scoreLoaded`](#event-scoreLoaded): A new score has been loaded
+  * [`cursorPosition`](#event-cursorposition): The cursor position changed
+  * [`rangeSelection`](#event-rangeSelection): The range selected changed
+  * [`fullscreen`](#event-fullscreen): The fullscreen state changed
+  * [`print`](#event-print): The score was printed
+  * [`play`](#event-play): The score playback started
+  * [`pause`](#event-pause): The score playback paused
+  * [`stop`](#event-stop): The score playback stopped
   * [`playbackPosition`](#event-playbackposition): The playback slider position changed
 
 ## Methods
@@ -151,12 +163,84 @@ embed.loadFlatScore('56ae21579a127715a02901a6').then(function () {
 });
 ```
 
-### `getJson(): object`
+### `loadMusicXML(score: mixed): Promise<void, Error>`
+
+Load a MusicXML score, compressed (MXL) or not (plain XML):
+
+```js
+fetch('https://api.flat.io/v2/scores/56ae21579a127715a02901a6/revisions/last/mxl')
+.then(function (response) {
+  return response.arrayBuffer();
+})
+.then(function (mxl) {
+  return embed.loadMusicXML(mxl);
+})
+.then(function () {
+  // Score loaded in the embed
+})
+.catch(function (error) {
+  // Unable to load the score
+});
+```
+
+### `loadJSON(score: object): Promise<void, Error>`
+
+Load a score using Flat's JSON Format
+
+```js
+fetch('https://api.flat.io/v2/scores/56ae21579a127715a02901a6/revisions/last/json')
+.then(function (response) {
+  return response.json();
+})
+.then(function (json) {
+  return embed.loadJSON(json);
+})
+.then(function () {
+  // Score loaded in the embed
+})
+.catch(function (error) {
+  // Unable to load the score
+});
+```
+
+### `getMusicXML(options: object): Promise<string|Uint8Array, Error>`
+
+Convert the current displayed score into a MusicXML file, compressed (`.mxl`) or not (`.xml`).
+
+```js
+// Uncompressed MusicXML
+embed.getMusicXML().then(function (xml) {
+  // Plain XML file (string)
+  console.log(xml);
+});
+```
+
+Example: Retrieve the score as a compressed MusicXML, then convert it to a Blob and download it:
+```js
+// Uncompressed MusicXML
+embed.getMusicXML({ compressed: true }).then(function (buffer) {
+  // Create a Blob from a compressed MusicXML file (Uint8Array)
+  var blobUrl = window.URL.createObjectURL(new Blob([buffer], {
+    type: 'application/vnd.recordare.musicxml+xml'
+  }));
+
+  // Create a hidden link to download the blob
+  var a = document.createElement('a');
+  a.href = blobUrl;
+  a.download = 'My Music Score.mxl';
+  document.body.appendChild(a);
+  a.style = 'display: none';
+  a.click();
+  a.remove();
+});
+```
+
+### `getJSON(): object`
 
 Get the data of the score in the "Flat JSON" format (a MusicXML-like as a JavaScript object).
 
 ```js
-embed.getJson().then(function (data) {
+embed.getJSON().then(function (data) {
   console.log(data);
 }).catch(function (error) {
   // Unable to get the data
@@ -249,13 +333,94 @@ embed.setZoom(2).then(function (zoom) {
 });
 ```
 
+### `getAutoZoom(): Promise(<boolean, Error>)`
+
+Get the state of the auto-zoom mode. Auto-zoom is enabled by default for page mode or when the [URL parameter `zoom`](https://flat.io/developers/docs/embed/url-parameters.html) is set to `auto`.
+
+This getter will return `true` if the auto-zoom is enabled, and `false` when disabled. Setting a zoom value with [`setZoom`](#setzoomnumber-promisenumber-error) will disable this mode.
+
+```js
+embed.getAutoZoom().then(function (state) {
+  // The auto-zoom state
+  console.log(state);
+});
+```
+
+### `setAutoZoom(boolean): Promise(<boolean, Error>)`
+
+Enable (`true`) or disable (`false`) the auto-zoom. Auto-zoom is enabled by default for page mode or when the [URL parameter `zoom`](https://flat.io/developers/docs/embed/url-parameters.html) is set to `auto`. Setting a zoom value with [`setZoom`](#setzoomnumber-promisenumber-error) will disable this mode.
+
+```js
+embed.setAutoZoom(false).then(function (state) {
+  // Auto-zoom mode is disabled
+  console.log(state);
+});
+```
+
 ## Events API
 
 Events are broadcasted following actions made by the end user or you with the JavaScript API. You can subscribe to an event using the method [`on`](#onevent-string-callback-function-void), and unsubscribe using [`off`](#onevent-string-callback-function-void). When an event includes some data, this data will be available in the first parameter of the listener callback.
 
+### Event: `scoreLoaded`
+
+This event is triggered once a new score has been loaded. This event doesn't include any data.
+
+### Event: `cursorPosition`
+
+This event is triggered when the position of the user's cursor changes.
+
+```json
+{
+    "partIdx": 0,
+    "staffIdx": 1,
+    "voiceIdx": 0,
+    "measureIdx": 2,
+    "noteIdx": 1
+}
+```
+
+### Event: `rangeSelection`
+
+This event is triggered when a range of notes is selected or the selection changed.
+
+```json
+{
+    "from": {
+        "partIdx": 0,
+        "measureIdx": 1,
+        "staffIdx": 0,
+        "voiceIdx": 0,
+        "noteIdx": 2
+    },
+    "to": {
+        "partIdx": 0,
+        "measureIdx": 3,
+        "staffIdx": 0,
+        "voiceIdx": 0,
+        "noteIdx": 5
+    }
+}
+```
+
+### Event: `fullscreen`
+
+This event is triggered when the state of the fullscreen changed. The callback will take a boolean as the first parameter that will be `true` if the fullscreen mode is enabled, and `false` is the display is back to normal (fullscreen exited).
+
+### Event: `print`
+
+This event is triggered when you or the end-user prints the score. This event doesn't include any data.
+
 ### Event: `play`
 
-This event is triggered when you a the user plays the score. This event doesn't include any data.
+This event is triggered when you or the end-user starts the playback. This event doesn't include any data.
+
+### Event: `pause`
+
+This event is triggered when you or the end-user pauses the playback. This event doesn't include any data.
+
+### Event: `stop`
+
+This event is triggered when you or the end-user stops the playback. This event doesn't include any data.
 
 ### Event: `playbackPosition`
 
