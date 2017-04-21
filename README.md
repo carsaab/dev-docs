@@ -11,4 +11,4 @@ The issues in this repository are reserved for the documentation itself. If you 
 
 ## Licenses
 
-Documentation content is released under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by/4.0/). See [notices](docs/notices.md) for complete details, including attribution guidelines, contribution terms.
+Documentation content is released under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/). See [notices](docs/notices.md) for complete details, including attribution guidelines, contribution terms.
