@@ -216,6 +216,7 @@ embed.getMusicXML().then(function (xml) {
 ```
 
 Example: Retrieve the score as a compressed MusicXML, then convert it to a Blob and download it:
+
 ```js
 // Uncompressed MusicXML
 embed.getMusicXML({ compressed: true }).then(function (buffer) {
