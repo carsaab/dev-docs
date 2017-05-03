@@ -2,4 +2,4 @@
 
 # Embed client
 cp docs/embed/.javascript.md docs/embed/javascript.md
-curl https://raw.githubusercontent.com/FlatIO/embed-client/master/README.md | tail -n +7 >> docs/embed/javascript.md
+curl https://raw.githubusercontent.com/FlatIO/embed-client/master/README.md | tail -n +9 >> docs/embed/javascript.md
