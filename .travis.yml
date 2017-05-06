@@ -2,6 +2,10 @@ sudo: false
 language: node_js
 node_js:
   - 6
+addons:
+  apt:
+    packages:
+      - libssl1.0.0
 
 before_install:
   - rvm install 2.3.3
