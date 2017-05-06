@@ -17,6 +17,12 @@ The Flat API is built on HTTP. Our API is RESTful It has predictable resource UR
 
 You can use your favorite HTTP/REST library for your programming language to use Flat's API. This specification and reference is [available on Github](https://github.com/FlatIO/api-reference).
 
+## How to quickly getting started
+
+1. [Create an app](https://flat.io/developers/apps) for your script or project.
+2. **Try the API in 5 minutes** with [a Personal Access Token for your Flat account](authentication.html#personal-access-tokens).
+3. If you plan to make the app available for other people, [request some OAuth2 Credentials to our product team](https://docs.google.com/forms/d/e/1FAIpQLSeW4sZuUrcBXEtbecJ8xlWL9anbFCsrpHBgc6C48DOE4zuElQ/viewform).
+
 ## Beta
 
 Please note that this public API is currently in beta and subject to change.

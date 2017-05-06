@@ -4,24 +4,21 @@ permalink: api/authentication.html
 pid: api-auth
 ---
 
-The Flat Platform API uses [OAuth 2.0](https://oauth.net/2/) for authentication and authorization. If you never used OAuth2 before, we advise you to read this [great introduction](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2). Our API supports the **Authorization Code** and **Implicit** grants.
+The Flat Platform API uses [OAuth 2.0](https://oauth.net/2/) for authentication and authorization. If you never used OAuth2 before, we advise you to read this [great introduction](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2). Our API supports the **Authorization Code** and **Implicit** grants. To simplify the usage of our API for your own account, you can quickly create access tokens in your Flat account (aka. "Personal Access Tokens").
 
-To simplify the usage of our API for your own account, you can quickly create access tokens in your Flat account (aka. "Personal Access Tokens").
+## How to quickly getting started
 
-**Tl;dr OAuth2**:
-
-* Authorization URL: `https://flat.io/auth/oauth`
-* Token URL: `https://api.flat.io/oauth/access_token`
-* Invalidation URL: `https://api.flat.io/oauth/invalidate_token`
-* [List of scopes](#scopes)
+1. [Create an app](https://flat.io/developers/apps) for your script or project.
+2. **Try the API in 5 minutes** with [a Personal Access Token for your Flat account](#personal-access-tokens).
+3. If you plan to make the app available for other people, [request some OAuth2 Credentials to our product team](https://docs.google.com/forms/d/e/1FAIpQLSeW4sZuUrcBXEtbecJ8xlWL9anbFCsrpHBgc6C48DOE4zuElQ/viewform).
 
 ## Personal Access Tokens
 
 Personal Access Tokens function like OAuth access tokens for your own account. You can generate them from your account in a few seconds:
 
-* [Create an app](https://flat.io/developers/apps) for your script or project
-* On the left menu, click on "**Flat API > Personal Tokens**"
-* Choose a name and the authorization scopes for your first token.
+1. [Create an app](https://flat.io/developers/apps) for your script or project
+2. On the left menu, click on "**Flat API > Personal Tokens**"
+3. Choose a name and the authorization scopes for your first token.
 
 That's all, you can directly use our API with this token by setting it in the `Authorization` headers of your requests:
 
@@ -34,6 +31,15 @@ Here is an example with cURL:
 ```bash
 curl -H 'Authorization: Bearer <my_api_personal_access_token>' https://api.flat.io/v2/me
 ```
+
+## OAuth2
+
+**Do you Need some OAuth2 credentials? Please [contact our product team](https://docs.google.com/forms/d/e/1FAIpQLSeW4sZuUrcBXEtbecJ8xlWL9anbFCsrpHBgc6C48DOE4zuElQ/viewform)**. Here is the main information for our OAuh2 API, you can learn more about the scopes and flows in the paragraphs below.
+
+* Authorization URL: `https://flat.io/auth/oauth`
+* Token URL: `https://api.flat.io/oauth/access_token`
+* Invalidation URL: `https://api.flat.io/oauth/invalidate_token`
+* [List of scopes](#scopes)
 
 ## Scopes
 
