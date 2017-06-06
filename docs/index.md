@@ -17,7 +17,7 @@ Welcome to Flat's API and Embed documentation. Flat's API enables developers to 
 * You need a simple and customizable way to display and interact with sheet music in your web pages.
 * The Flat API features and support are growing commensurately following the growth of our products: creating and exporting music scores, managing education classes, and assignments, ... and much more!
 * Flat's API follows modern RESTful convention and is simple to use. We maintain an [OpenAPI Specification (fka. Swagger 2)](https://flat.io/developers/api/reference) for this one.
-* Flat is a [Certified LTI Provider](lti/), if you implements an LTI consumer, check out our [LTI information](lti/).
+* Flat is a [Certified LTI Provider](lti/), if you use or implement an LTI consumer, check out our [LTI information](lti/).
 
 ## Sheet music web embed
 
