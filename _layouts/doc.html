@@ -34,9 +34,14 @@ layout: default
     <a href="{{site.baseurl}}/import/" class="{% if page.pid == 'import-usage' %}active{% endif %}">Usage</a>
     <a href="{{site.baseurl}}/graphic-assets/" class="{% if page.pid == 'graphic-assets' %}active{% endif %}">Graphic assets</a>
   </div>
+
+  <div class="nav-title">LTI</div>
+  <div class="items">
+    <a href="{{site.baseurl}}/lti/" class="{% if page.pid == 'lti-usage' %}active{% endif %}">Usage</a>
+  </div>
 </div>
 
 <div class="page">
   {% unless page.notitle %}<h1>{{ page.title }}</h1>{% endunless %}
-  <div class="content">{{ content }}</div>
+  <div class="doc-content">{{ content }}</div>
 </div>
