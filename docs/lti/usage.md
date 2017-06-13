@@ -16,6 +16,7 @@ We are certified on the following implementations:
 
 We also implement some vendor specific LTI extensions:
 
+* [Light-weight Content Extension](https://www.eduappcenter.com/docs/extensions/content)
 * [Canvas Navigation](https://www.eduappcenter.com/docs/extensions/canvas_navigation)
 * [Canvas WYSIIG](https://www.eduappcenter.com/docs/extensions/canvas_wysiwyg)
 * [Canvas Link Selection](https://www.eduappcenter.com/docs/extensions/canvas_link_selection)
