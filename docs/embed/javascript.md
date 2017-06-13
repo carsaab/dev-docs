@@ -23,7 +23,7 @@ or
 bower install flat-embed
 ```
 
-or use the latest version hosted on [jsDelivr](https://www.jsdelivr.com/projects/flat-embed):
+or use the latest version hosted on jsDelivr:
 
 ```html
 <script src="https://cdn.jsdelivr.net/flat-embed/0.3.0/embed.min.js"></script>
