@@ -38,4 +38,4 @@ We regularly update our API and services, you can discover all the changes to ou
 
 ## v2.0.0 (2017-04-10)
 
-* chore(api): First API public release with /v2/me, /v2/scores, /v2/users and /v2/groups.
+* chore(api): First API public release with `/v2/me`, `/v2/scores`, `/v2/users` and `/v2/groups`.
