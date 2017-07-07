@@ -26,7 +26,7 @@ bower install flat-embed
 or use the latest version hosted on jsDelivr:
 
 ```html
-<script src="https://cdn.jsdelivr.net/flat-embed/0.3.0/embed.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flat-embed@v0.5.0/dist/embed.min.js"></script>
 ```
 
 ## Getting Started
@@ -35,7 +35,7 @@ The simplest way to get started is the pass a DOM element to our embed that will
 
 ```html
 <div id="embed-container"></div>
-<script src="https://cdn.jsdelivr.net/flat-embed/0.3.0/embed.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flat-embed@v0.5.0/dist/embed.min.js"></script>
 <script>
   var container = document.getElementById('embed-container');
   var embed = new Flat.Embed(container, {
@@ -84,6 +84,7 @@ When instantiating `Flat.Embed`, you can pass options in the second parameter. I
   * [`loadJSON`](#loadjsonscore-object-promisevoid-error): Load Flat JSON file
   * [`getMusicXML`](#getmusicxmloptions-object-promisestringuint8array-error): Get the score in MusicXML (compressed or not)
   * [`getJSON`](#getjson-object): Get the score data in Flat JSON format
+  * [`getPNG`](#getpngoptions-object-promisestringuint8array-error): Get the score as a PNG file
   * [`getScoreMeta`](#getscoremeta-object): Get the metadata from the current score (for hosted scores)
   * [`fullscreen`](#fullscreenstate-bool-promisevoid-error): Toggle fullscreen mode
   * [`play`](#play-promisevoid-error): Start playback
@@ -94,6 +95,7 @@ When instantiating `Flat.Embed`, you can pass options in the second parameter. I
   * [`setZoom`](#setzoomnumber-promisenumber-error): Change the display zoom ratio
   * [`getAutoZoom`](#getautozoom-promiseboolean-error): Get the state of the auto-zoom mode
   * [`setAutoZoom`](#setautozoomboolean-promiseboolean-error): Enable or disable the auto-zoom mode
+  * [`focusScore`](#focusscore-promisevoid-error): Set the focus to the score
 * [Editor Methods](#editor-methods)
   * [`setEditorConfig`](#seteditorconfigconfig-object-promiseobject-error): Set the config of the editor
   * [`edit`](#editoperations-object-promisevoid-error): Make a modification to the document
@@ -270,6 +272,26 @@ embed.getJSON().then(function (data) {
 });
 ```
 
+### `getPNG(options?: object): Promise<string|Uint8Array, Error>`
+
+Get the current displayed score as a PNG file
+
+```js
+// PNG
+embed.getPNG().then(function (png) {
+  // PNG file as a Uint8Array
+  console.log(png);
+});
+```
+
+```js
+// PNG
+embed.getPNG({result: 'dataURL'}).then(function (png) {
+  // PNG file as a DataURL
+  console.log(png);
+});
+```
+
 ### `getScoreMeta(): object`
 
 Get the score metadata of the hosted score. The object will have the same format that the one returned [by our API `GET /v2/scores/{score}`](https://flat.io/developers/api/reference/#operation/getScore).
@@ -380,6 +402,18 @@ embed.setAutoZoom(false).then(function (state) {
 });
 ```
 
+### `focusScore(): Promise(<void, Error>)`
+
+Unlike the web version on <https://flat.io>, the embed does't catch the focus. This avoids to mess with the parent window, and avoid the browser to do a forced scrolling to the embed iframe.
+
+If the end-user's goal is the usage of the embed to play or write notation, you can use this method to set the focus on the score and allowing they to use the keyboard bindings.
+
+```js
+embed.focusScore().then(function () {
+  // Focus is now on the score
+});
+```
+
 ## Editor Methods
 
 You can enable the editor mode by setting the `mode` to `edit` when creating the embed:
@@ -403,7 +437,8 @@ embed.setEditorConfig({
   noteMode: {
     durations: true
   },
-  articulationMode: false
+  articulationMode: false,
+  defaultMode: 'note'
 }).then(function (config) {
   // The config of the embed
   console.log(config);
