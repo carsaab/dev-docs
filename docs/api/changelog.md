@@ -7,7 +7,7 @@ pid: api-changelog
 
 We regularly update our API and services, you can discover all the changes to our public specification. While we try to avoid breaking changes during the Beta Period, they will be written below in bold if any.
 
-## v2.2.0 (2017-04-02)
+## v2.2.0 (2017-07-02)
 
 * feat(edu): Public release of the first education APIs:
   * `/v2/classes`: Classes management
