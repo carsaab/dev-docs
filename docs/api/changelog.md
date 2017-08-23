@@ -9,7 +9,13 @@ We regularly update our API and services, you can discover all the changes to ou
 
 ## Unreleased
 
-* feat(user): Add profile theme and instruments played
+* feat(user): Add profile theme and instruments played.
+* feat(edu): Add new cursor-based pagination for `GET /v2/organizations/users` and `GET /v2/organizations/invitations`.
+* feat(edu): Add new methods:
+  * `PUT /v2/organizations/users/{user}`: Admin endpoint to update managed accounts.
+  * `DELETE /v2/organizations/users/{user}`: Admin endpoint to delete or convert edu accounts to consumer accounts.
+* feat(edu): Classes have a new state `inactive` that can be activated using the new method `POST /v2/classes/{class}/activate`.
+* feat(edu): Assignments have a new state `draft` and can have a new attachment type `exercise`.
 
 ## v2.2.0 (2017-07-02)
 
@@ -20,7 +26,7 @@ We regularly update our API and services, you can discover all the changes to ou
   * `/v2/organizations/invitations`: Organization invitations for admins and teachers
   * `/v2/organizations/lti/credentials`: LTI credentials management
   * `/v2/groups/{group}` and `/groups/{group}/users`: List of groups and users part of groups
-  * `/scores/{score}/submissions`: Submissions linked to a score
+  * `/v2/scores/{score}/submissions`: Submissions linked to a score
 * feat(edu): New OAuth2 scopes:
   * `edu.classes`: Full, permissive scope to manage the classes.
   * `edu.classes.readonly`: Read-only access to the classes.
@@ -31,14 +37,14 @@ We regularly update our API and services, you can discover all the changes to ou
   * `edu.admin.lti.readonly`: Read-only access to the LTI Credentials of an organization.
   * `edu.admin.users`: Access and manage the users and invitations of the organization.
   * `edu.admin.users.readonly`: Read-only access to the users and invitations of the organization.
-* fix(spec): Add missing scopes in specification for `GET /scores/{score}/revisions/{revision}` and `GET /scores/{score}/revisions/{revision}/{format}`
+* fix(spec): Add missing scopes in specification for `GET /v2/scores/{score}/revisions/{revision}` and `GET /v2/scores/{score}/revisions/{revision}/{format}`
 
 ## v2.1.0 (2017-04-17)
 
 * feat(scores): Add support of private links sharing with `sharingKey`.
 * feat(comments): Make "revision" optional when creating comments and support of "last" keyword.
 * fix(revisions): Missing `id` property in `ScoreRevision`.
-* update(spec): Specify `binary` response type for `GET /scores/{score}/revisions/{revision}/{format}`
+* update(spec): Specify `binary` response type for `GET /v2/scores/{score}/revisions/{revision}/{format}`
 
 ## v2.0.0 (2017-04-10)
 
