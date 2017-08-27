@@ -16,6 +16,7 @@ We regularly update our API and services, you can discover all the changes to ou
   * `DELETE /v2/organizations/users/{user}`: Admin endpoint to delete or convert edu accounts to consumer accounts.
 * feat(edu): Classes have a new state `inactive` that can be activated using the new method `POST /v2/classes/{class}/activate`.
 * feat(edu): Assignments have a new state `draft` and can have a new attachment type `exercise`.
+* feat(edu): Return Canvas LMS Instance domain in classes details
 
 ## v2.2.0 (2017-07-02)
 
