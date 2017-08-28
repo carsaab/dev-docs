@@ -7,7 +7,7 @@ pid: api-changelog
 
 We regularly update our API and services, you can discover all the changes to our public specification. While we try to avoid breaking changes during the Beta Period, they will be written below in bold if any.
 
-## Unreleased
+## v2.3.0 (2017-08-28)
 
 * feat(user): Add profile theme and instruments played.
 * feat(edu): Add new cursor-based pagination for `GET /v2/organizations/users` and `GET /v2/organizations/invitations`.
