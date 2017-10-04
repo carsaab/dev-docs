@@ -7,6 +7,13 @@ pid: api-changelog
 
 We regularly update our API and services, you can discover all the changes to our public specification. While we try to avoid breaking changes during the Beta Period, they will be written below in bold if any.
 
+## v2.4.0 (2017-10-02)
+
+* feat(scores): New metadata and update of `PUT /v2/scores/{score}`:
+  * Added metadata in API `subtitle`, `lyricist`, `composer`, `description`, `tags`, `creationType`, `license`, `licenseText`, `durationTime`, `numberMeasures`, `mainTempoQpm`, `publicationDate`.
+  * `PUT /v2/scores/{score}`: Remove `title` property, this one can be updated by saving a new revision of the score data.
+  * `PUT /v2/scores/{score}`: New settable properties: `description`, `tags`, `creationType`, `license`.
+
 ## v2.3.0 (2017-08-28)
 
 * feat(user): Add profile theme and instruments played.
