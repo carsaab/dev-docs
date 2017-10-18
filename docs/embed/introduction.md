@@ -27,6 +27,8 @@ We store and replicate every revision of every sheet music across multiple count
 
 The basic version of our embed is available for everyone for free. Just [sign up](https://flat.io), create or open any sheet music on Flat, click on "Share > Embed" and you directly get the HTML code ready to use!
 
-If you want to [customize it](url-parameters.html) (e.g. removing Flat Branding, changing the controls displayed, the colors / theme) or use our JavaScript API, just [contact us](mailto:developers@flat.io) and we will provide a custom offer for you.
+Get our [JavaScript Client](javascript.html) to use the full capabilities of the embed: easily interact with the sheet music, load and export any file on the fly, use our... and much more!
+
+If you want to [customize it](url-parameters.html) (e.g. removing Flat Branding, changing the controls displayed, the colors / theme) or use our editor in the embed, just [contact our team](mailto:developers@flat.io) and we will provide a custom offer for you.
 
 Our embed offers include displaying sheet music in a completely customizable and interactive viewer and the ability for your users to edit sheet music in the embed. We are currently in the process of providing more editing APIs based on the feedback we receive, so [feel free to reach out](mailto:developers@flat.io) and we will make our embed work for you!
