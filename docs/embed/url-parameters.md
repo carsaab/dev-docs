@@ -55,6 +55,15 @@ The following features require an Embed API Key to be used.
 | [`controlsZoom`](#display-or-hide-zoom-side-panel-controls-controlszoom) | Display or hide the zoom control | `true` or `false` (default = `true`)|
 | [`controlsPrint`](#display-or-hide-print-control-controlsprint) | Display or hide the print button | `true` or `false` (default = `true`)|
 
+## Audio & Video sources
+
+On any score on hosted on Flat, you can link one or multiple audio/video sources. These ones can be hosted on YouTube, SoundCloud or Vimeo. You can easily synchronize them using our user interface or [REST API](https://flat.io/developers/api/reference/#operation/addScoreTrack).
+
+| Query Parameter | Summary | Values |
+|:----------------|:--------|:-------|
+| `audioSource` | Audio source to use when loading the embed | `playback`, `default` (the track marked as default, or playback if none), or the [unique identifier of the track to use](https://flat.io/developers/api/reference/#operation/listScoreTracks) (default value = `playback`) |
+| [`videoPosition`](#video-position-videoposition) | Display position of the video in the embed | `top`, `left`, `float`, `hidden` (default = `hidden`) |
+
 ## Playback options
 
 The following features require an Embed API Key to be used.
@@ -178,3 +187,19 @@ Demo: Let's say that we want to hide the Flat branding, stack the controls and d
 * ```themeCursorV0=#E53935```
 
 ![Embed themes demo]({{site.baseurl}}/assets/img/embed-colors.png)
+
+### Video position (`videoPosition`)
+
+When using an [audio or video source](#audio--video-sources), you can customize the position of the player: `top`, `left`, `float`, `hidden`.
+
+### `top`
+
+![Video on the top of the score]({{site.baseurl}}/assets/img/embed-video-top.png)
+
+### `left`
+
+![Video on the left of the score]({{site.baseurl}}/assets/img/embed-video-left.png)
+
+### `float`
+
+![Video floating of the score]({{site.baseurl}}/assets/img/embed-video-float.png)
