@@ -7,6 +7,10 @@ pid: api-changelog
 
 We regularly update our API and services, you can discover all the changes to our public specification. While we try to avoid breaking changes during the Beta Period, they will be written below in bold if any.
 
+## v2.5.0 (2017-10-22)
+
+* feat(scores): Add video & audio tracks support for scores: `/v2/scores/{score}/tracks`.
+
 ## v2.4.0 (2017-10-02)
 
 * feat(scores): New metadata and update of `PUT /v2/scores/{score}`:
