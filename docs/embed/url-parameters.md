@@ -9,7 +9,7 @@ When [embedding sheet music](index.html) in your website or blog, you can easily
 
 The easiest way is by adding different URL parameters of our iframe, you can find the different options available for you below.
 
-Please note that all the options referenced here are not included in our free embed, some of them may require the usage of an API key or a paying plan (e.g. for custom branding). If you are not using the embed right now or need additional options not listed below, feel free to [contact us](https://flat.io/support), we will work with you to make it works for you!
+Please note that all the options referenced here are not included in our free embed, some of them may require the usage of an [API key](https://flat.io/developers/apps) or a paying plan (e.g. for custom branding). If you are not using the embed right now or need additional options not listed below, feel free to [contact us](https://flat.io/support), we will work with you to make it works for you!
 
 | Query Parameter | Summary | Values |
 |:----------------|:--------|:-------|
