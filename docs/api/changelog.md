@@ -7,6 +7,10 @@ pid: api-changelog
 
 We regularly update our API and services, you can discover all the changes to our public specification. While we try to avoid breaking changes during the Beta Period, they will be written below in bold if any.
 
+## v2.5.1 (2018-01-16)
+
+* fix(user): Add missing escape in `pattern` (`UserCreation.username`).
+
 ## v2.5.0 (2017-10-22)
 
 * feat(scores): Add video & audio tracks support for scores: `/v2/scores/{score}/tracks`.
