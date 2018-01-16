@@ -20,3 +20,8 @@ Flat offers and maintain the following SDKs and to ease development. These SDKs 
 
 * Check out the documentation and the source code [on GitHub](https://github.com/FlatIO/api-client-php).
 * This SDK is available on [Packagist (`flat/api`)](https://packagist.org/packages/flat/api).
+
+## 💎 Ruby
+
+* Check out the documentation and the source code [on GitHub](https://github.com/FlatIO/api-client-ruby).
+* This SDK is available on [Rubygems (`flat_api`)](https://rubygems.org/gems/flat_api).
