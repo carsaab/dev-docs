@@ -20,7 +20,7 @@ defaults:
     values:
       layout: doc
 
-gems:
+plugins:
   - jekyll-less
   - jekyll-seo-tag
   - jekyll-sitemap
