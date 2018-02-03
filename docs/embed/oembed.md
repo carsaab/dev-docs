@@ -10,6 +10,8 @@ pid: embed-oembed
 * ```https://flat.io/score/*```
 * ```https://*.flat.io/score/*```
 
+This oEmbed endpoint work with any score shared as **Public** or **Private with sharing link** (scores with the privacy `public` or `privateLink` in our REST API).
+
 ## Endpoint
 
 Flat's oEmbed is available at the following URL:

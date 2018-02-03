@@ -32,7 +32,9 @@ exclude:
   - script
   - node_modules
   - package.json
+  - package-lock.json
   - _site_test
+  - vendor
 
 twitter:
   username: flat_io
