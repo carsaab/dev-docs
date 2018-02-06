@@ -20,7 +20,7 @@ Flat's oEmbed is available at the following URL:
 https://flat.io/services/oembed
 ```
 
-Basic example:
+JSON Example:
 
 ```bash
 $ curl "https://flat.io/services/oembed?format=json&url=https%3A%2F%2Fflat.io%2Fscore%2F56ae21579a127715a02901a6"
@@ -34,8 +34,29 @@ $ curl "https://flat.io/services/oembed?format=json&url=https%3A%2F%2Fflat.io%2F
     "width": 800,
     "height": 400,
     "title": "House of the Rising Sun",
-    "html": "<iframe src=\"https://flat.io/embed/56ae21579a127715a02901a6?layout=page\" allowfullscreen height=\"400\" width=\"800\" frameBorder=\"0\"></iframe>"
+    "html": "<iframe src=\"https://flat.io/embed/56ae21579a127715a02901a6?\" allowfullscreen height=\"400\" width=\"800\" frameBorder=\"0\"></iframe>",
+    "thumbnail_url": "https://flat.io/api/v2/scores/56ae21579a127715a02901a6/revisions/last/thumbnail.png"
 }
+```
+
+XML Example:
+
+```bash
+$ curl "https://flat.io/services/oembed?format=xml&url=https%3A%2F%2Fflat.io%2Fscore%2F56ae21579a127715a02901a6"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<oembed>
+  <version>1.0</version>
+  <title>House of the Rising Sun</title>
+  <type>rich</type>
+  <width>800</width>
+  <height>400</height>
+  <html>&lt;iframe src=&#34;https://flat.io/embed/56ae21579a127715a02901a6?&#34; allowfullscreen height=&#34;400&#34; width=&#34;800&#34; frameBorder=&#34;0&#34;&gt;&lt;/iframe&gt;</html>
+  <author_name>Flat Team</author_name>
+  <author_url>https://flat.io/flat</author_url>
+  <provider_name>Flat</provider_name>
+  <provider_url>https://flat.io</provider_url>
+  <thumbnail_url>https://flat.io/api/v2/scores/56ae21579a127715a02901a6/revisions/last/thumbnail.png</thumbnail_url>
+</oembed>
 ```
 
 ## oEmbed Parameters
